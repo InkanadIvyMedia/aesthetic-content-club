@@ -1,3 +1,4 @@
+# node_modules intentionally excluded — npm install runs in Netlify build
 node_modules/
 .env
 .env.local
