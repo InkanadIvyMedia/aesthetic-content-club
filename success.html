@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Welcome — Aesthetic Content Club</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:         #f5f2ec;
+    --text:       #1e1d1a;
+    --text-muted: #6b6760;
+    --text-dim:   #aaa89f;
+    --accent:     #4a5c3a;
+    --border:     rgba(30,29,26,0.1);
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--text);
+  }
+  .logo em { font-style: normal; color: var(--accent); }
+
+  main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 3rem;
+  }
+
+  .card {
+    max-width: 520px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .check-ring {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 0.5px solid var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem;
+  }
+
+  .check-ring svg {
+    width: 22px;
+    height: 22px;
+    color: var(--accent);
+  }
+
+  .eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(32px, 5vw, 46px);
+    line-height: 1.1;
+    margin-bottom: 1.25rem;
+  }
+  h1 em { font-style: italic; color: var(--accent); }
+
+  .divider {
+    width: 36px;
+    height: 0.5px;
+    background: var(--accent);
+    margin: 0 auto 1.5rem;
+  }
+
+  .body-text {
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.75;
+    margin-bottom: 2.5rem;
+  }
+
+  .info-box {
+    background: #fff;
+    border: 0.5px solid var(--border);
+    padding: 1.5rem 2rem;
+    text-align: left;
+    margin-bottom: 2.5rem;
+  }
+
+  .info-box p {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+  .info-box p + p { margin-top: 0.75rem; }
+  .info-box p::before {
+    content: '—';
+    color: var(--accent);
+    flex-shrink: 0;
+    font-size: 12px;
+    margin-top: 2px;
+  }
+
+  .btn-home {
+    display: inline-block;
+    border: 0.5px solid var(--border);
+    color: var(--text-muted);
+    padding: 0.75rem 2rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 1px;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .btn-home:hover { border-color: var(--accent); color: var(--accent); }
+
+  footer {
+    border-top: 0.5px solid var(--border);
+    padding: 1.5rem 3rem;
+    text-align: center;
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 0.08em;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Aesthetic Content <em>Club</em></div>
+</nav>
+
+<main>
+  <div class="card">
+    <div class="check-ring">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12"/>
+      </svg>
+    </div>
+
+    <p class="eyebrow">Payment confirmed</p>
+    <h1>Welcome to the<br><em>Club.</em></h1>
+    <div class="divider"></div>
+
+    <p class="body-text">
+      Your membership is active. Check your inbox — your Pixieset library link and album password are on their way to you now.
+    </p>
+
+    <div class="info-box">
+      <p>Your content email will arrive within a few minutes. Check your spam folder if you don't see it.</p>
+      <p>The album password is in the email. You'll need it each time you access the library at <strong>library.aestheticcontent.club</strong>.</p>
+      <p>Questions? Email us at <strong>hello@aestheticcontent.club</strong> — we reply same day.</p>
+    </div>
+
+    <a class="btn-home" href="/">Back to Home</a>
+  </div>
+</main>
+
+<footer>
+  © 2026 Aesthetic Content Club &nbsp;·&nbsp; All assets licensed for single-entity commercial use.
+</footer>
+
+</body>
+</html>

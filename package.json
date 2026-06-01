@@ -1,0 +1,9 @@
+{
+  "name": "aesthetic-content-club",
+  "version": "1.0.0",
+  "description": "Aesthetic Content Club membership site",
+  "dependencies": {
+    "stripe": "^14.0.0",
+    "resend": "^3.0.0"
+  }
+}
