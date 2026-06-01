@@ -66,7 +66,7 @@ exports.handler = async (event) => {
 
   try {
     const resend = new Resend(process.env.RESEND_API_KEY);
-    await resend.emails.send({
+    const result = await resend.emails.send({
       from: process.env.FROM_EMAIL || 'hello@aestheticcontent.club',
       to:   email,
       subject: `Your Aesthetic Content Club access is ready — ${label}`,
@@ -96,7 +96,12 @@ exports.handler = async (event) => {
       `,
     });
 
-    console.log(`Access email sent to ${email} for tier "${tier}"`);
+    if (result.error) {
+      console.error('Resend delivery error:', JSON.stringify(result.error));
+      return { statusCode: 500, body: 'Email send failed: ' + result.error.message };
+    }
+
+    console.log(`Access email sent to ${email} for tier "${tier}" — Resend ID: ${result.data?.id}`);
     return { statusCode: 200, body: 'OK' };
   } catch (err) {
     console.error('Resend error:', err.message);
